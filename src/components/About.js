@@ -1,6 +1,7 @@
 import React from "react";
+import { image } from "../data/user"; 
 
-function About() {
+const About = () => {
   return (
     <div id="about">
       <h2>About Me</h2>
@@ -8,4 +9,6 @@ function About() {
       <img src={image} alt="I made this" />
     </div>
   );
-}
+};
+
+export default About;

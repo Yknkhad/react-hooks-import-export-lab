@@ -3,9 +3,7 @@ import { render } from "@testing-library/react";
 import App from "../components/App";
 
 test("it renders without crashing", () => {
-  try {
-    expect(() => render(<App />)).not.toThrow();
-  } catch (e) {
-    throw new Error("Make sure to import the required components!");
-  }
+  const { getByText } = render(<App />);
+
+  expect(getByText("I'm a link!")).toBeInTheDocument();
 });
